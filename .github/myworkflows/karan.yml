@@ -1,2 +1,19 @@
-name: myworkflows
+
+name: My First Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test workflow
+        run: echo "Hello! GitHub Actions is working."
  
